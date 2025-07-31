@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/home.css">
+
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+ 
+</head>
+<body>
+     <nav class="navbar">
+    <ul class="menu">
+
+        <li>
+            <a href="index.html">
+                <img src="images/logo.jpg" class="logo" alt="logo">
+            </a>
+        </li>
+
+        <li><a href="{{ url('/') }}"><span class="material-icons">home</span> Início</a></li>
+        
+        <li class="has-submenu"><span class="material-icons">business</span> Institucional
+            <ul class="submenu">
+                <li><a href="#">Histórico</a></li>
+                <li><a href="#">Missão e Visão</a></li>
+                <li><a href="#">Estatuto</a></li>
+            </ul>
+        </li>
+        <li class="has-submenu"><span class="material-icons">groups</span> Órgãos Sociais
+            <ul class="submenu">
+                <li><a href="#">Direção</a></li>
+                <li><a href="#">Assembleia</a></li>
+                <li><a href="#">Conselhos</a></li>
+            </ul>
+        </li>
+        <li class="has-submenu"><span class="material-icons">person</span> A Profissão
+            <ul class="submenu">
+                <li><a href="#">Perfil Profissional</a></li>
+                <li><a href="#">Áreas de Atuação</a></li>
+            </ul>
+        </li>
+        <li class="has-submenu"><span class="material-icons">gavel</span> Regulamentos
+            <ul class="submenu">
+                <li><a href="#">Código Deontológico</a></li>
+                <li><a href="#">Normas</a></li>
+            </ul>
+        </li>
+        <li class="has-submenu"> <span class="material-icons">medical_services</span> INFORMAÇÃO ORDEPDITA
+            <ul class="submenu">
+                <li><a href="#">Boletins</a></li>
+                <li><a href="#">Estudos</a></li>
+            </ul>
+        </li>
+    </ul>
+    <a id="area_restrita" href="login.html">Área Restrita</a>
+    </nav>
+    <div class="carrossel-container">
+        <div class="carrossel" id="carrossel">
+            <img src="{{ asset('fotos/licenca-image.jpg') }}" class="slide active" alt="Imagem 1">
+            <img src="{{ asset('fotos/ordem-de-especialistas.jpg') }}" class="slide" alt="Imagem 2">
+            <img src="{{ asset('fotos/carreiras-image.jpg') }}" class="slide" alt="Imagem 3">
+            <img src="{{ asset('fotos/comissao-instaladora.jpg') }}" class="slide" alt="Imagem 4">
+            {{-- <img src="{{ asset('fotos/imagem.jpg') }}" class="slide" alt="Imagem 5">
+            <img src="{{ asset('fotos/imagem4.jpg') }}" class="slide" alt="Imagem 6">
+            <img src="{{ asset('fotos/fisiot.jpg') }}" class="slide" alt="Imagem 7">
+            <img src="{{ asset('fotos/practise.jpg') }}" class="slide" alt="Imagem 8"> --}}
+        </div>
+        <div class="dots" id="dots">
+                <span class="dot @if($i === 0) active @endif" data-index="{{ $i }}"></span>
+        </div>
+    </div>
+
+        <h1 id="servico"> SERVIÇOS </h1>
+
+    <div class="cards-section">
+    
+         <a href="informacao.html">
+        <div class="card">
+            <span class="material-icons card-icon">info</span>
+            <h3>Info</h3>
+                   
+        </div>
+        </a>
+        <a href="inscricao.html">
+            <div class="card">
+                <span class="material-icons card-icon">assignment</span>
+                <h3>Inscrição</h3>
+            </div>
+        </a>
+        <a href="#">
+            <div class="card">
+                <span class="material-icons card-icon">update</span>
+                <h3>Actualização</h3>
+            </div>
+        </a>
+    </div>
+    <br><br><br>
+    <h1 id="noticia"> NOTÍCIAS </h1>
+
+    <div class="news-section">
+        <div class="news-card">
+            <div class="news-image">
+                <img src="images/image-noticia.jpg" alt="Notícia 1">
+            </div>
+            <p class="news-description">
+                Comissão Instaladora
+                <br><br><br><br><br>
+                <span class="material-icons clock-icon">schedule</span> 30/06/2020
+            </p>
+        </div>
+
+        <div class="news-card">
+            <div class="news-image">
+                <img src="images/2.jpg" alt="Notícia 2">
+            </div>
+            <p class="news-description">
+                Comissão Instaladora
+                <br><br><br><br><br>
+                <span class="material-icons clock-icon">schedule</span> 08/12/2013
+            </p>
+        </div>
+
+        <div class="news-card">
+            <div class="news-image">
+                <img src="images/7.jpg" alt="Notícia 1">
+            </div>
+            <p class="news-description">
+                Comissão Instaladora
+                <br><br><br><br><br>
+                <span class="material-icons clock-icon">schedule</span> 25/06/2021
+            </p>
+        </div>
+    </div>
+
+    <section id="amarela">
+        <div id="image">
+            <img src="fotos/imagem4.jpg" alt="Notícia 1">
+        </div>
+        <div id="conteudo">    
+            <h1>SOBRE NOSSA INSTITUIÇÃO</h1>
+            <p>A Ordem dos Técnicos de Diagnóstico e Terapeutas (ORDEPDITA) é uma instituição nacional que regula, fiscaliza e valoriza o exercício profissional dos técnicos das áreas de diagnóstico e terapêutica em Angola. Representamos profissionais como técnicos de análises clínicas, fisioterapia, imagiologia, optometria, terapia da fala, entre outros, essenciais para a qualidade dos cuidados de saúde.</p>
+            <p>Nosso objetivo é garantir que o exercício destas profissões ocorra com ética, competência e responsabilidade, promovendo a formação contínua, o reconhecimento legal e a emissão de carteiras profissionais. Atuamos em defesa da classe e da sociedade, assegurando um sistema de saúde mais justo e eficiente.<br><br>
+            A ORDEPDITA é símbolo de união, confiança e compromisso com a excelência profissional e o bem-estar da população angolana</p>
+        </div>
+    </section>
+
+    <section id="gps">
+        
+    </section>
+      <footer>
+        <div id="footer">    
+            <div class="info">
+                <h3>Ordepdtita</h3>
+                <p class="barra"></p>
+                <div class="logo-foot">
+                    <img src="images/logotipo.png" alt="Logotipo da ordepdita">
+                </div>
+                <div class="download-apps">
+                    <h3>Download Ordepdita App</h3>
+                    <a href="#" class="apps-dowload">
+                        <img src="images/icone-app-store.svg" alt="icone da app store">
+                    </a>
+                    <a href="#" class="apps-dowload">
+                        <img src="images/icone-play-store-c.png" alt="icone da play store">
+                    </a>
+                </div>
+            </div>
+            <div class="info">
+                <h3>Contactos</h3>
+                <p class="barra"></p>
+                <p>Em caso de dúvidas ou sugestões, <br>contacte-nos.</p>
+                <p>Endereço e Telefones</p>
+            </div>
+            <div class="info">
+                <h3>Comunicação</h3>
+                <p class="barra"></p>
+                <p>Comunicados, discursos e eventos</p>
+                <ul>
+                    <li>Agenda OPD</li>
+                    <li>Texto</li>
+                    <li>Eventos</li>
+                    <li>Galeria de imagens</li>
+                </ul>
+            </div>
+            <div class="info">
+                <h3>Redes Sociais</h3>
+                <p class="barra"></p>
+                <p>
+                    Para facilitar o contacto e disseminação das informações, a ordem dos [nome associação] de Angola
+                </p>
+                <p>
+                    Siga nossas redes sociais e mantenha-se informado(a)
+                </p>
+            </div>
+        </div>
+        <div class="foot">
+            <p>&copy;Ordepdita - 2025 Todos os direitos reservados</p>
+        </div>
+    </footer>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const items = document.querySelectorAll('.has-submenu');
+
+        items.forEach(item => {
+            item.addEventListener('click', function (e) {
+                // Evita abrir todos ao mesmo tempo
+                items.forEach(i => {
+                    if (i !== item) i.classList.remove('active');
+                });
+
+                // Toggle da classe
+                item.classList.toggle('active');
+                e.stopPropagation();
+            });
+        });
+
+        // Fecha submenu clicando fora
+        document.body.addEventListener('click', function () {
+            items.forEach(i => i.classList.remove('active'));
+        });
+    });
+</script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const slides = document.querySelectorAll('.slide');
+        const dots = document.querySelectorAll('.dot');
+        let index = 0;
+        let interval = setInterval(nextSlide, 5000); // 5 segundos
+
+        function showSlide(i) {
+            slides.forEach((slide, idx) => {
+                slide.classList.toggle('active', idx === i);
+                dots[idx].classList.toggle('active', idx === i);
+            });
+            index = i;
+        }
+
+        function nextSlide() {
+            index = (index + 1) % slides.length;
+            showSlide(index);
+        }
+
+        dots.forEach(dot => {
+            dot.addEventListener('click', () => {
+                clearInterval(interval);
+                showSlide(parseInt(dot.dataset.index));
+                interval = setInterval(nextSlide, 5000); // reinicia intervalo
+            });
+        });
+    });
+</script>
+
+
+</body>
+</html>

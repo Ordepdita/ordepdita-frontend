@@ -1,0 +1,104 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    /*background-color: rgba(218, 218, 218, 0.791);*/
+    background-color: rgb(40, 47, 66);
+}
+main{
+    margin: auto;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.63) 0px 10px 10px 0px;
+    width: 660px;
+    height: 67vh;
+    padding: 20px;
+    margin-top: 70px;
+}
+
+main div#login{
+    position: absolute;
+}
+
+main div#login h1{
+    padding-top: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    font-size: 1.1em;
+    position: relative;
+}
+
+main div#login h1#sistema{
+    padding-top: 10px;
+    margin: 60px 0px 10px 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    font-size: 1.2em;
+    position: relative;
+    left: 7.8vw;
+}
+
+main div#login input#entrar{
+    width: 85vw;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 0.8em;
+    width: 130px;
+    background-color: rgb(29, 46, 61);
+    color: white;
+    border-radius: 5px;
+    position: relative;
+    left: 80px;
+    cursor: pointer;
+}
+
+main div#login input#entrar:hover{
+    background-color: white;
+    color: rgba(29, 46, 61);
+}
+
+
+main div#imagem img{
+    position: absolute;
+    top: 19.2vh;
+    right: 24.7vw;
+    border: solid rgba(0, 0, 0, 0.397) 1px;
+    float: right;
+    height:73.6vh;
+    width: 26vw;
+    border-radius: 130px 15px 15px 65px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+
+/* Estilização básica dos inputs */
+#login input[type="email"], 
+#login input[type="password"] {
+    height: 40px;
+    width: 18vw;
+    border: 1.5px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: border 0.3s;
+    margin-left: 1vw;
+}
+
+#login input[type="email"]:focus, 
+#login input[type="password"]:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+/* Efeito hover para os ícones */
+.input-with-icon i {
+    transition: color 0.3s;
+    margin-left: 1vw;
+}
+
+.input-with-icon:hover i {
+    color: #4CAF50;
+}

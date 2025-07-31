@@ -1,0 +1,41 @@
+/* Requisitos informações */
+
+#card-info {
+    padding: 0px 1.3em;
+}
+
+#card-info > p {
+    text-align: center;
+    margin-bottom: 2em;
+}
+article {
+    margin-bottom: 2em;
+    height: auto;
+    display: flex;
+    flex-flow: row wrap;
+    align-content: space-evenly;
+} 
+#info-hr {
+    margin: 2em 0px;
+}
+
+h3#primeiro{
+     margin-left: 15vw;
+}
+
+h3#segundo{
+    margin-left: 15vw;
+    
+}
+
+section#card-info{
+    width: 87vw;
+    border: none;
+}
+
+section#card-info article ul li {
+    margin-bottom: .5em;
+    list-style-position: inside;
+    margin-left: 12vw;
+    
+}

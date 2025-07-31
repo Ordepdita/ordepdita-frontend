@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Informação</title>
+    
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/home.css">
+
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+ 
+</head>
+<body>
+     <nav class="navbar">
+    <ul class="menu">
+
+        <li>
+            <a href="index.html">
+                <img src="images/logo.jpg" class="logo" alt="logo">
+            </a>
+        </li>
+
+        <li><a href="{{ url('/') }}"><span class="material-icons">home</span> Início</a></li>
+        
+        <li class="has-submenu"><span class="material-icons">business</span> Institucional
+            <ul class="submenu">
+                <li><a href="#">Histórico</a></li>
+                <li><a href="#">Missão e Visão</a></li>
+                <li><a href="#">Estatuto</a></li>
+            </ul>
+        </li>
+        <li class="has-submenu"><span class="material-icons">groups</span> Órgãos Sociais
+            <ul class="submenu">
+                <li><a href="#">Direção</a></li>
+                <li><a href="#">Assembleia</a></li>
+                <li><a href="#">Conselhos</a></li>
+            </ul>
+        </li>
+        <li class="has-submenu"><span class="material-icons">person</span> A Profissão
+            <ul class="submenu">
+                <li><a href="#">Perfil Profissional</a></li>
+                <li><a href="#">Áreas de Atuação</a></li>
+            </ul>
+        </li>
+        <li class="has-submenu"><span class="material-icons">gavel</span> Regulamentos
+            <ul class="submenu">
+                <li><a href="#">Código Deontológico</a></li>
+                <li><a href="#">Normas</a></li>
+            </ul>
+        </li>
+        <li class="has-submenu"> <span class="material-icons">medical_services</span> INFORMAÇÃO ORDEPDITA
+            <ul class="submenu">
+                <li><a href="#">Boletins</a></li>
+                <li><a href="#">Estudos</a></li>
+            </ul>
+        </li>
+    </ul>
+    <a id="area_restrita" href="/login">Área Restrita</a>
+    </nav>
+
+
+<link rel="stylesheet" href="{{ asset('css/formulario.css') }}">
+<link rel="stylesheet" href="{{ asset('css/formulario4.css') }}">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700&display=swap" rel="stylesheet" />
+
+<body>
+    <br><br><br><br><h1><a href="/formulario3"><span class="material-symbols-outlined back-icon">arrow_back</span></a>INSCRIÇÃO</h1>
+
+    <section></section><br>
+
+    <div class="container">
+        
+        <br><br><div class="progress-bar">
+            <div class="progress-step">
+                <div class="step-number">1</div>
+                <div class="step-label">Dados Pessoais</div>
+            </div>
+            <div class="progress-step">
+                <div class="step-number">2</div>
+                <div class="step-label">Dados Institucional</div>
+            </div>
+            <div class="progress-step">
+                <div class="step-number">3</div>
+                <div class="step-label">Dados Acadêmicos</div>
+            </div>
+            <div class="progress-step active">
+                <div class="step-number">4</div>
+                <div class="step-label">Anexar Documentos</div>
+            </div>
+            <div class="progress-step">
+                <div class="step-number">5</div>
+                <div class="step-label">Pagamento</div>
+            </div>
+        </div>
+        
+        <section class="progress"></section><br>
+
+        <h1 class="anexar">Anexar Documentos</h1>
+        <p id="ficheiro">Ficheiro permitido: PDF (tamanho máximo: 2mb)</p>
+
+        <div class="upload-container">
+            <label for="bi_pdf" class="custom-upload">
+                <img src="{{ asset('fotos/upload-file.png') }}" alt="Upload" class="upload-icon-img">
+                <span class="upload-text">Fotocópia colorida do B.I.</span>
+                <div id="bi_file_preview" class="file-preview-container"></div>
+                <input type="file" name="bi_pdf" id="bi_pdf" accept="application/pdf">
+            </label>
+
+
+
+            <label for="inarees_pdf" class="custom-upload">
+                <img src="{{ asset('fotos/upload-file.png') }}" alt="Upload" class="upload-icon-img">
+                <span class="upload-text">Fotocópia da Declaração do INAREES</span>
+                <div id="inarees_file_preview" class="file-preview-container"></div>
+                <input type="file" name="inarees_pdf" id="inarees_pdf" accept="application/pdf">
+            </label>
+
+            <label for="diploma_pdf" class="custom-upload">
+                <img src="{{ asset('fotos/upload-file.png') }}" alt="Upload" class="upload-icon-img">
+                <span class="upload-text">Fotocópia do Diploma ou Certificado</span>
+                <div id="diploma_file_preview" class="file-preview-container"></div>
+                <input type="file" name="diploma_pdf" id="diploma_pdf" accept="application/pdf">
+            </label>
+        </div>
+
+        <h3 id="nota">Nota: Os documentos a anexar ao processo devem estar traduzidos na Língua Portuguesa.<br>TERMO DE COMPROMISSO</h3>
+
+        <div class="verificar">
+            <label class="checkbox-container">
+                <input type="checkbox" id="trabalhaCheckbox" onchange="mostrarFormulario()">
+                <span class="checkmark">
+                    <span class="material-icons">check</span>
+                </span>
+                <p>Eu declaro, sob minha inteira responsabilidade e para todos os fins de direito, que os documentos enviados por meio desta plataforma são legítimos e completos em sua totalidade.<br><br>Assumo por meio de este Termo de Compromisso dar fé, diante das autoridades públicas e/ou Privadas, que os documentos submetidos são irrepreensíveis na sua íntegra.</p>
+            </label>
+        </div>
+
+        <div class="navigation">
+            <button id="btnVoltar" class="btn btn-back">VOLTAR</button>
+            <button id="btnSeguinte" class="btn btn-next">SEGUINTE</button>
+        </div>
+    </div>
+     <footer>
+        <div id="footer">    
+            <div class="info">
+                <h3>Ordepdtita</h3>
+                <p class="barra"></p>
+                <div class="logo-foot">
+                    <img src="images/logotipo.png" alt="Logotipo da ordepdita">
+                </div>
+                <div class="download-apps">
+                    <h3>Download Ordepdita App</h3>
+                    <a href="#" class="apps-dowload">
+                        <img src="images/icone-app-store.svg" alt="icone da app store">
+                    </a>
+                    <a href="#" class="apps-dowload">
+                        <img src="images/icone-play-store-c.png" alt="icone da play store">
+                    </a>
+                </div>
+            </div>
+            <div class="info">
+                <h3>Contactos</h3>
+                <p class="barra"></p>
+                <p>Em caso de dúvidas ou sugestões, <br>contacte-nos.</p>
+                <p>Endereço e Telefones</p>
+            </div>
+            <div class="info">
+                <h3>Comunicação</h3>
+                <p class="barra"></p>
+                <p>Comunicados, discursos e eventos</p>
+                <ul>
+                    <li>Agenda OPD</li>
+                    <li>Texto</li>
+                    <li>Eventos</li>
+                    <li>Galeria de imagens</li>
+                </ul>
+            </div>
+            <div class="info">
+                <h3>Redes Sociais</h3>
+                <p class="barra"></p>
+                <p>
+                    Para facilitar o contacto e disseminação das informações, a ordem dos [nome associação] de Angola
+                </p>
+                <p>
+                    Siga nossas redes sociais e mantenha-se informado(a)
+                </p>
+            </div>
+        </div>
+        <div class="foot">
+            <p>&copy;Ordepdita - 2025 Todos os direitos reservados</p>
+        </div>
+</footer>
+
+    <script>
+        // Configuração para mostrar o preview do arquivo DENTRO do container
+        document.addEventListener('DOMContentLoaded', function() {
+            // Função para todos os inputs
+            function setupFileInput(inputId, previewId) {
+                const input = document.getElementById(inputId);
+                const preview = document.getElementById(previewId);
+                
+                input.addEventListener('change', function(e) {
+                    const file = e.target.files[0];
+                    
+                    if (file) {
+                        // Verifica se é PDF
+                        if (file.type !== 'application/pdf') {
+                            alert('Por favor, selecione um arquivo PDF.');
+                            this.value = '';
+                            preview.style.display = 'none';
+                            return;
+                        }
+                        
+                        // Verifica o tamanho (2MB máximo)
+                        if (file.size > 2 * 1024 * 1024) {
+                            alert('O arquivo é muito grande. Tamanho máximo permitido: 2MB.');
+                            this.value = '';
+                            preview.style.display = 'none';
+                            return;
+                        }
+                        
+                        // Cria URL para o arquivo
+                        const fileUrl = URL.createObjectURL(file);
+                        
+                        // Atualiza o preview
+                        preview.innerHTML = `
+                            <a href="${fileUrl}" class="file-preview-link" target="_blank" title="Abrir PDF">
+                                <span class="material-icons">picture_as_pdf</span>
+                                ${file.name}
+                            </a>
+                            <span class="material-icons delete-file" 
+                                  onclick="event.stopPropagation(); removeFile('${inputId}', '${previewId}')">
+                                delete
+                            </span>
+                        `;
+                        preview.style.display = 'flex';
+                    } else {
+                        preview.style.display = 'none';
+                    }
+                });
+            }
+            
+            // Configura todos os inputs
+            setupFileInput('bi_pdf', 'bi_file_preview');
+            setupFileInput('inarees_pdf', 'inarees_file_preview');
+            setupFileInput('diploma_pdf', 'diploma_file_preview');
+        });
+        
+        // Função global para remover arquivo
+        function removeFile(inputId, previewId) {
+            document.getElementById(inputId).value = '';
+            document.getElementById(previewId).style.display = 'none';
+            document.getElementById(previewId).innerHTML = '';
+        }
+
+
+
+         // Verifica se há arquivos carregados
+    function hasUploadedFiles() {
+        const inputs = [
+            document.getElementById('bi_pdf'),
+            document.getElementById('inarees_pdf'),
+            document.getElementById('diploma_pdf')
+        ];
+        
+        return inputs.some(input => input.files.length > 0);
+    }
+
+    // Adiciona o event listener para antes de descarregar a página
+    window.addEventListener('beforeunload', function(e) {
+        if (hasUploadedFiles()) {
+            // Mensagem personalizada (alguns navegadores podem não mostrar)
+            const confirmationMessage = 'Você carregou documentos. Tem certeza que deseja recarregar a página? Os arquivos serão perdidos.';
+            
+            // Padrão para a maioria dos navegadores
+            e.preventDefault();
+            e.returnValue = confirmationMessage;
+            return confirmationMessage;
+        }
+    });
+
+    // Adiciona também confirmação para links/cliques que saem da página
+    document.addEventListener('click', function(e) {
+        if (hasUploadedFiles()) {
+            const target = e.target.closest('a');
+            if (target && target.href) {
+                if (!confirm('Você carregou documentos. Tem certeza que deseja sair desta página? Os arquivos serão perdidos.')) {
+                    e.preventDefault();
+                }
+            }
+        }
+    });
+
+
+
+    // Ações dos botões VOLTAR e SEGUINTE
+    document.getElementById('btnVoltar').addEventListener('click', () => {
+        window.location.href = "{{ url('/formulario3') }}";
+    });
+
+    document.getElementById('btnSeguinte').addEventListener('click', () => {
+        window.location.href = "{{ url('/formulario5') }}";
+    });
+
+
+    </script>
+</body>
+
+@endsection
